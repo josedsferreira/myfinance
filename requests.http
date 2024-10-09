@@ -1,0 +1,50 @@
+
+
+// GET balances
+GET http://localhost:8080/api/balances
+
+###
+
+// CREATE Balance ENTRY
+POST http://localhost:8080/api/balances
+Content-Type: application/json
+
+{
+    "amount": 500.80,
+    "balanceYear": 1970,
+    "balanceMonth": 2
+}
+
+
+
+
+
+
+
+
+// GET MONEY ENTRY
+GET http://localhost:8080/api/moneyentries/1
+
+###
+
+// GET MONEY ENTRY that does not exist
+GET http://localhost:8080/api/moneyentries/100
+
+###
+
+// CREATE MONEY ENTRY
+POST http://localhost:8080/api/moneyentries
+Content-Type: application/json
+
+{
+    "id": 5,
+    "monthNumber": 20,
+    "yearNumber": 1970,
+    "amount": 500.80
+
+}
+
+###
+
+// DELETE MONEY ENTRY
+DELETE http://localhost:8080/api/moneyentries/2
